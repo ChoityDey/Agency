@@ -2,6 +2,8 @@ import React from 'react'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import Iframe from 'react-iframe'
 import  { useState } from 'react';
+import {motion} from 'framer-motion';
+
 
 
 
@@ -66,6 +68,18 @@ const Contactnew = () => {
 
         return errors;
     };
+    const containerVariants = {
+        hidden: { 
+          opacity: 0, 
+          x: '-100vh' 
+        },
+        visible: { 
+          opacity: 1, 
+          x: 0,
+          transition: { type: 'spring', delay: 0.5 }
+        }
+      };
+      
 
   return (
     <>
@@ -73,7 +87,11 @@ const Contactnew = () => {
             <Row>
                 <Col sm={12} md={6} lg={6}>
                  <div className="form-container">
-            <h2 className="form-title">Form Validation</h2>
+            <motion.h2 
+            variants={containerVariants}
+            initial= "hidden"
+            animate= "visible"
+            className="form-title">Form Validation</motion.h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label className="form-label">
@@ -143,21 +161,26 @@ const Contactnew = () => {
                         </span>
                     )}
                 </div>
-                <button className="submit-button" type="submit">Submit</button>
+                <motion.button
+                animate= {{
+                    backgroundColor: '#111'
+                }}
+                transition={{delay:1.5}}
+                 className="submit-button" type="submit">Submit</motion.button>
             </form>
         </div>
     
                 </Col>
 
                 <Col className='mt-5 ' sm={12} md={6} lg={6}>
+                
                 <Iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7236.563094932561!2d91.8639756078896!3d24.922476861186013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m5!1s0x3750551e7da58bcd%3A0x7cd35cba3faa14e7!2z4Ka44Ka_4Kay4KeH4KafIOCmhuCmqOCnjeCmpOCmsOCnjeCmnOCmvuCmpOCmv-CmlSDgppXgp43gprDgpr_gppXgp4fgpp8g4Ka44KeN4Kaf4KeH4Kah4Ka_4Kav4Ka84Ka-4Kau!3m2!1d24.920976!2d91.8686125!4m3!3m2!1d24.921499299999997!2d91.8728806!5e0!3m2!1sbn!2sbd!4v1726510971130!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></Iframe>
+                
                
-                  
                 </Col>
             </Row>
         </Container>
     </>
   )
-}
-
+};
 export default Contactnew

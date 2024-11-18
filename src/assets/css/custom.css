@@ -8,6 +8,20 @@
     background-repeat: no-repeat;
      
 }
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: #292525;
+    font-size: 1rem;
+    
+     
+}
+.Footermenu{
+    margin-left: 30%;
+}
+
 .topBannerOverlay{
     min-height: 500px;
     width: 100%;
@@ -98,9 +112,9 @@
     bottom: -10px;
 }
 .counter-bg{
-    background-color: #9cc1e7;
+    background-color: #2a3c4e;
     padding: 2rem;
-    color: #504d4d;
+    color: #ddd;
     border: 1px solid #504d4d;
 }
 .navTitleScroll{
@@ -174,5 +188,57 @@ background-color: #c32c2c;
   .mb{
     margin-bottom: 80px;
   }
-  
-  
+  .footer{
+    padding: 20px 0 10px;
+    background-color: #b3b8bc;
+  }
+  .footer1 {
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  .footer1 h2{
+    font-size: 22px;
+    color: #0000ff;
+    font-weight: 600;
+  } 
+  .footer2 h4{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 22px;
+    color: #0000ff;
+  }
+  .footer2 li{
+    margin-bottom: 10px;
+  }
+  .footer2 li a:hover{
+    color: #0056b3;
+    font-size: 20px;
+  }
+  .footer3{
+    margin-left: 80px;
+  }
+  .footer3 h4{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 25px;
+    color: #0000ff;
+  }
+  .footer3 li{
+    margin-bottom: 15px;
+  }
+  .SummaryContent2{
+    font-size: 30px;
+  }
+ .sponsor{
+  background-color:#819bd1;
+  padding: 15px;
+ }
+ .sidemenu a{
+  text-decoration: none;
+  color: #ddd;
+  font-size: 22px;
+  margin-bottom: 15px;
+ }
+ .sidemenu a:hover{
+  color: #819bd1
+ }

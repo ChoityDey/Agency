@@ -2,8 +2,10 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import AnaImage from '../../assets/images/analysis.jpg'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { delay } from 'framer-motion';
 
 // import Analysis from '../../assets/images/analysis.jpg'
+import {motion} from 'framer-motion';
 
 const Analysis = () => {
     const data = [
@@ -50,6 +52,23 @@ const Analysis = () => {
           amt: 2100,
         },
       ];
+      const containerVariants ={
+        hidden:{
+          opacity: 0,
+          y: '-100vh',
+        },
+        vissible:{
+          opacity:1,
+          y: 0,
+          transition: {
+            type: 'tween',
+            staggerChildren: 0.7,
+            delay: 1.5,
+            duration: 1.5,
+            when: 'beforeChild'
+          }
+        }
+      }
       
   return (
     <>
@@ -61,12 +80,24 @@ const Analysis = () => {
                         <Container>
                             <Row>
                                 <Col sm={12} md={12} lg={12}>
-                                    <h1 className='AnalysisContent'>What do we do?</h1>
+                                    <motion.h1
+                                    variants={containerVariants}
+                                    initial="hidden"
+                                    animate="vissible"
+                                    className='AnalysisContent'>What do we do?</motion.h1>
                                     <p className='AnalysisContentText'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga enim ex et qui, modi repellendus aperiam reprehenderit dignissimos aut laborum ipsum impedit similique! Enim non rerum omnis reiciendis debitis officiis!</p>
 
                                 </Col>
                                 <Col sm={12} md={12} lg={12}>
-                                    <h4>Our Working Process.</h4>
+                                    <motion.h4 
+                                    viewport={{once:false}}
+                                    initial={{opacity:0, x:-50}}
+                                    whileInView={{opacity:1, x:0}}
+                                    transition={{type:'easeIn',
+                                      duration:1,
+                                      delay:.7 
+                                    }}
+                                    >Our Working Process.</motion.h4>
                                     <div style={{width:'100%',height:'300px'}} >
                                         <ResponsiveContainer width="100%" height="100%">
                                                 <BarChart
@@ -90,8 +121,25 @@ const Analysis = () => {
                     
                     </Col>
 
-                    <Col className='Image' sm={12} md={6} lg={4}>
-                        <img src={AnaImage} />
+                    <Col
+                      
+                    className='Image' sm={12} md={6} lg={4}>
+                        <motion.img
+                        initial={{x:100, opacity:0}}
+                        whileInView={{x:0, opacity:1}}
+                        viewport={{once:false}}
+                        transition={{
+                          delay:0.2,
+                          x:{type:"spring", stiffness:60},
+                          opacity:{duration:1},
+                          ease:"easeIn",
+                          duration:1
+                        }}
+                        src={AnaImage} />
+                      
+                        
+                      
+                      
                     </Col>
 
                 </Row>

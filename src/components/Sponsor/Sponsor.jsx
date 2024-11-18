@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
     return (
       <div 
         className= {className}
-        style={{ ...style, display: "block", background: "green"}}
+        style={{ ...style, display: "block", background: "black"}}
         onClick={onClick}
       />
     );
@@ -24,7 +24,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "green" }}
+        style={{ ...style, display: "block", background: "black" }}
         onClick={onClick}
       />
     );
@@ -75,22 +75,29 @@ const Sponsor = () => {
       };
   return (
     <>
-        <Container className='mt-5'>
-        <Slider {...settings}>     
+        <Container className='sponsor mt-5'>
+        <Slider {...settings}>  
+          
         <div>
           <img src={Spon1} />
-          <h1>choity</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quisquam, magni qui magnam ullam commodi aspernatur. Esse, magnam eius neque accusantium, porro excepturi debitis suscipit nostrum dolore cumque dolorem omnis.</p>
+          
+         
         </div>
-        <div>
-        <img src={Spon2}></img>
+        <div >
+          <img src={Spon2} />
+          
+         
         </div>
-        <div>
-        <img src={Spon3}></img>
+        <div >
+          <img src={Spon3} />
+          
+         
         </div>
-        <div>
-        <img src={Spon4}></img>
-        </div>
+        <div >
+          <img src={Spon4} />
+          
+         </div>
+        
 
         </Slider>
             

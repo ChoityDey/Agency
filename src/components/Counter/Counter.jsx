@@ -14,8 +14,8 @@ const Counter = () => {
                      <div className="topContent">
                         <Row>
                             <Col lg={3} md={6} sm={12}className='counter-bg'>
-                               <h4 className='SummaryContent'>clients</h4>
-                               <p className='SummaryContent'>
+                               <h4 className='SummaryContent'>Clients</h4>
+                               <p className='SummaryContent2'>
                                <CountUp start={0} end={50}>
                                 {({ countUpRef, start }) => (
                                     <div>
@@ -33,8 +33,8 @@ const Counter = () => {
                             </Col>
 
                             <Col lg={3} md={6} sm={12} className='counter-bg'>
-                               <h4 className='SummaryContent'>clients</h4>
-                               <p className='SummaryContent'>
+                               <h4 className='SummaryContent'>Clients</h4>
+                               <p className='SummaryContent2'>
                                <CountUp start={0} end={100}>
                                 {({ countUpRef, start }) => (
                                     <div>
@@ -48,8 +48,8 @@ const Counter = () => {
                                </p>
                             </Col>
                             <Col lg={3} md={6} sm={12} className='counter-bg'>
-                               <h4 className='SummaryContent'>clients</h4>
-                               <p className='SummaryContent'>
+                               <h4 className='SummaryContent'>Clients</h4>
+                               <p className='SummaryContent2'>
                                <CountUp start={0} end={100}>
                                 {({ countUpRef, start }) => (
                                     <div>
@@ -64,8 +64,8 @@ const Counter = () => {
                             </Col>
 
                             <Col lg={3} md={6} sm={12}className='counter-bg'>
-                               <h4 className='SummaryContent'>clients</h4>
-                               <p className='SummaryContent'>
+                               <h4 className='SummaryContent'>Clients</h4>
+                               <p className='SummaryContent2'>
                                <CountUp start={0} end={10}>
                                 {({ countUpRef, start }) => (
                                     <div>

@@ -15,6 +15,7 @@ import About from './components/About/About'
 import Sponsor from './components/Sponsor/Sponsor'
 import Counter from './components/Counter/Counter'
 import Contactnew from './components/Contactnew/Contactnew'
+import Footer from './components/Footer/Footer'
 
 // import Contact from './components/Contact/Contact'
 
@@ -39,11 +40,12 @@ function App() {
     <Banner />
     <Analysis />
     <Services />
-    <Services2 />
+    {/* <Services2 /> */}
     <About />
     <Sponsor />
     <Counter />
     <Contactnew />
+    <Footer />
    
 
     {/* <Contact /> */}
